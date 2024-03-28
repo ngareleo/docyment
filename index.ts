@@ -1,3 +1,3 @@
-import { explainCodeSnippet } from "./src/docyment";
+import { explainProject } from "./src/docyment";
 
-explainCodeSnippet();
+explainProject();
