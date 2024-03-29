@@ -7,10 +7,10 @@ export async function encodeProject(path: string) {
   const encoding = [];
   const files = await readdir(path, { recursive: true });
   for (const file of files) {
-    const f = Bun.file(`${path}/${file}`);
-    if (!f.exists() || f.type === "") continue;
-    const content = await f.text();
-    encoding.push({ content, file });
+    try {
+      const content = await Bun.file(`${path}/${file}`).text();
+      encoding.push({ content, file });
+    } catch (_) {}
   }
   return encoding;
 }
