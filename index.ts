@@ -1,3 +1,3 @@
 import { explainProject } from "./src/docyment";
 
-explainProject();
+exports.document = explainProject;
