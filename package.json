@@ -2,7 +2,7 @@
   "name": "docyment",
   "version": "0.1.0",
   "description": "A simple documentation generator for ts/js projects",
-  "bin": "./src/bin/cli",
+  "bin": "./bin/index",
   "module": "index.ts",
   "type": "module",
   "devDependencies": {

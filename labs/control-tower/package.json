@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "docyment": "^1.0.0"
+    "docyment": "^0.1.0"
   }
 }
