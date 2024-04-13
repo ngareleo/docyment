@@ -1,0 +1,2 @@
+#!/usr/bin/env node
+import * as docyment from "./docyment/src/cli";

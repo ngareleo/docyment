@@ -1,5 +1,5 @@
 import OpenAI from "openai";
-import { prompt } from "./prompts/simple.simple";
+import { prompt } from "./prompts/simple.prompt";
 import { encodeProject } from "./reader/read";
 import fullProjectPrompt from "./prompts/explain-project.prompt";
 
@@ -18,11 +18,12 @@ export async function explainCodeSnippet() {
 }
 
 export async function explainProject() {
-  const encoding = await encodeProject("./src/labs/control-tower");
+  const encoding = await encodeProject("./labs/control-tower");
   const promptWithSnippet = fullProjectPrompt.replace(
     "{GROUNDING_DATA}",
     JSON.stringify(encoding)
   );
+  console.log(promptWithSnippet);
   const completion = await client.chat.completions.create({
     messages: [{ role: "system", content: promptWithSnippet }],
     model: "gpt-4",

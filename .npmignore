@@ -1,0 +1,6 @@
+labs/
+node_modules/
+.vscode/
+.env*
+docyment.config.ts
+.gitignore

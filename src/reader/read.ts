@@ -10,7 +10,7 @@ export async function encodeProject(path: string) {
     try {
       const content = await Bun.file(`${path}/${file}`).text();
       encoding.push({ content, file });
-    } catch (error) {}
+    } catch (_) {}
   }
   return encoding;
 }
